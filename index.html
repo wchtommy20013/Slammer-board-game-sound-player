@@ -3,33 +3,15 @@
 	<head>
 		<script src='slammers.js'></script>
 	</head>
-	<body>
+	<body onload="init()">
 
+	Period:<input type="number" id="period" value="2000" style="width:50px"></input> ms
 	<button id="start_btn" onclick="start()">Start</button>
 	<button id="pause_btn" onclick="pause()">Pause</button>
 	<button id="resume_btn" onclick="resume()" style="display: none;">Resume</button>
 	<button id="reset_btn" onclick="reset()">Reset</button>
-		<div>
-			<audio preload="auto" id="bell"><source src="sounds/bell.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="clock"><source src="sounds/clock.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="cock"><source src="sounds/cock.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="cow"><source src="sounds/cow.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="whistle"><source src="sounds/whistle.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="sheep"><source src="sounds/sheep.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="saw"><source src="sounds/saw.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="radio"><source src="sounds/radio.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="phone"><source src="sounds/phone.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="horse"><source src="sounds/horse.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="harp"><source src="sounds/harp.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="elephant"><source src="sounds/elephant.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="duck"><source src="sounds/duck.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="drum"><source src="sounds/drum.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="dog"><source src="sounds/dog.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="frog"><source src="sounds/frog.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="baby"><source src="sounds/baby.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="glass_break"><source src="sounds/glass_break.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="bagpipe"><source src="sounds/bagpipe.mp3" type="audio/mp3"></audio>
-			<audio preload="auto" id="owl"><source src="sounds/owl.mp3" type="audio/mp3"></audio>
+		<div id='audio_clips'>
+			
 		</div>
 		<hr>
 		<div>

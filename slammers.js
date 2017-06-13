@@ -16,9 +16,23 @@ var paused = false;
 var timer1;
 var timer2;
 
+function init(){
+	var div = document.getElementById("audio_clips");
+	for(var i = 0; i < arr.length; i++){
+		var audio = document.createElement("audio");
+		audio.preload = "auto";
+		audio.id = arr[i];
+		var source = document.createElement("source");
+		source.src = "sounds/" + arr[i] + ".mp3" 
+		source.type = "audio/mp3";
+		audio.appendChild(source);
+		div.appendChild(audio);
+	}
+	shuffle(arr);
+}
+
 function start(){
 	if(!started){
-		shuffle(arr);
 		timer2 = setTimeout(playnext, 2000);
 		started = true;
 	}
@@ -27,7 +41,6 @@ function start(){
 function reset(){
 	location.reload();
 }
-
 
 
 function pause(){
@@ -61,5 +74,5 @@ function playnext(){
 		count--;	
 	}, 5000);
 	if(count > 0)
-		timer2 = setTimeout(playnext, 9000);
+		timer2 = setTimeout(playnext, 5000 + parseInt(document.getElementById("period").value));
 }
